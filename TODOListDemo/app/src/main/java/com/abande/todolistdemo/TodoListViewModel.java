@@ -62,8 +62,10 @@ public class TodoListViewModel extends AndroidViewModel {
         @Override
         protected Void doInBackground(final List<TodoModel>... params) {
             if(params[0] != null){
-                for (TodoModel model : params[0])
-                db.todoModel().addTodo(model);
+                for (TodoModel model : params[0]){
+                    db.todoModel().addTodo(model);
+                }
+
             }
 
             return null;
